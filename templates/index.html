@@ -3,6 +3,8 @@
 	<head>
     <meta charset="utf-8" />
 		<title>My Class</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 	</head>
 	<body>
     <h1>Data Analytics Bootcamp</h1>
@@ -15,5 +17,8 @@
       <label for="student">Add new student:</label><input type="text" name="student">
       <input type="submit">
     </form>
+    <br />
+    <span>Count of students: <span id="studentCount"></span></span>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 	</body>
 </html>

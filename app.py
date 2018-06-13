@@ -1,5 +1,6 @@
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, jsonify, render_template, redirect, request, url_for
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import func
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///students.db'
@@ -35,6 +36,11 @@ def add_student():
             print(f'Exception when adding student: {str(e)}')
 
     return redirect(url_for('homepage'))
+
+@app.route('/data')
+def student_data():
+    count = db.session.query(func.count(Student.id)).scalar()
+    return jsonify({'count': count})
 
 
 if __name__ == "__main__":
