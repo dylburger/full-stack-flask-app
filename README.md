@@ -149,6 +149,8 @@ These files are in the `static` directory, but our HTML is in the `templates` di
 
 replacing the actual filename with the path to your file, within the `static` directory.
 
+Note that, in our app, we've included a link to `app.js` **at the bottom of the `body` of our HTML**. Some of our JavaScript requires that we render HTML to the DOM _before_ we reference that HTML in JavaScript, so including it after our HTML makes sure that the nodes are written to the page.
+
 ### The JavaScript
 
 Our JavaScript uses a bit of D3 code to fetch the count of students from our `/data` endpoint, adding that count to the empty span in our HTML above.
