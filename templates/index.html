@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>My Class</title>
+	</head>
+	<body>
+    <h1>Data Analytics Bootcamp</h1>
+    <ul id="students">
+    {% for student in students %}
+        <li>{{ student.name }}</li>
+    {% endfor %}
+    </ul>
+    <form method="POST" action="/student">
+      <label for="student">Add new student:</label><input type="text" name="student">
+      <input type="submit">
+    </form>
+	</body>
+</html>
