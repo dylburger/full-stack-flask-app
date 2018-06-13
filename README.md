@@ -1,10 +1,10 @@
 ## Minimal, Full Stack Flask app
 
-This guide and associated code walk you through how to create a full stack (from SQLite to JavaScript) app with Flask.
+This guide and associated code walk you through how to create a full stack (from SQLite to JavaScript) app with [Flask](http://flask.pocoo.org/).
 
 ### How all the pieces fit together
 
-Understanding a model of how all the pieces fit together can be the hardest part of learning how to create Flask apps. Let's talk about what connects to what, and how this all works from the perspective of the user.
+Understanding how all the pieces of a web application fit together can be the hardest part of learning how to create Flask apps. Let's talk about what connects to what, and how this all works from the perspective of the user.
 
 The user sees a webpage. They have no idea what application (Flask) powers that. They have no idea that you're running SQL queries behind the scenes. This is a good thing. You can develop an app that's easy for "normal" users to use, abstracting the code / logic.
 
