@@ -1,0 +1,8 @@
+click==6.7
+flask-sqlalchemy==2.3.2
+flask==1.0.2
+itsdangerous==0.24
+jinja2==2.10
+markupsafe==1.0
+sqlalchemy==1.2.8
+werkzeug==0.14.1
